@@ -2,13 +2,14 @@ package ru.netology.hw10;
 
 public class FilmsManager {
     private String[] films = new String[0];
+    private int limit;
 
     public FilmsManager() {
-
+        limit = 10;
     }
 
     public FilmsManager(int limit) {
-
+        this.limit = limit;
     }
 
     public void addFilm(String film) {
@@ -24,7 +25,7 @@ public class FilmsManager {
         return films;
     }
 
-    public String[] findLastFilms(int limit) {
+    public String[] findLastFilms() {
         int resultLenght;
         if (films.length < limit) {
             resultLenght = films.length;
